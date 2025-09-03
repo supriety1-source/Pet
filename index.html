@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supriety™ - The struggle was worth the solution</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #0f0f23, #1a1a2e, #16213e);
+            color: #ffffff;
+            overflow-x: hidden;
+            line-height: 1.6;
+            font-size: 18px;
+        }
+
+        /* Floating background elements */
+        .floating-bg {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .floating-orb {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(106, 13, 173, 0.3), rgba(106, 13, 173, 0.1));
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .orb-1 { width: 200px; height: 200px; top: 10%; left: 10%; animation-delay: 0s; }
+        .orb-2 { width: 150px; height: 150px; top: 60%; right: 15%; animation-delay: 2s; }
+        .orb-3 { width: 100px; height: 100px; top: 80%; left: 20%; animation-delay: 4s; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            min-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .supriety-logo {
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 900;
+            background: linear-gradient(45deg, #6A0DAD, #8A2BE2, #9370DB, #6A0DAD);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: glow-pulse 3s ease-in-out infinite, gradient-shift 4s ease infinite;
+            text-shadow: 0 0 30px rgba(106, 13, 173, 0.8);
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+        }
+
+        @keyframes glow-pulse {
+            0%, 100% { filter: brightness(1) drop-shadow(0 0 20px rgba(106, 13, 173, 0.8)); }
+            50% { filter: brightness(1.2) drop-shadow(0 0 40px rgba(106, 13, 173, 1)); }
+        }
+
+        @keyframes gradient-shift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .tagline {
+            font-size: clamp(1.2rem, 4vw, 2rem);
+            font-weight: 600;
+            color: #8A2BE2;
+            margin-bottom: 40px;
+            letter-spacing: 0.1em;
+            text-transform: lowercase;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+
+        .promise {
+            font-size: clamp(1.4rem, 4vw, 2rem);
+            margin-bottom: 30px;
+            font-weight: 600;
+            background: linear-gradient(135deg, #ffffff, #e5e7eb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeInUp 1s ease-out 0.5s both;
+            max-width: 800px;
+        }
+
+        .trust-strip {
+            font-size: 1rem;
+            margin-bottom: 40px;
+            opacity: 0.8;
+            animation: fadeInUp 1s ease-out 0.7s both;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #6A0DAD, #8A2BE2);
+            border: none;
+            padding: 18px 40px;
+            border-radius: 50px;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(106, 13, 173, 0.4);
+            animation: fadeInUp 1s ease-out 0.9s both;
+            min-height: 44px;
+            min-width: 200px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(106, 13, 173, 0.6);
+            background: linear-gradient(135deg, #8A2BE2, #9370DB);
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section h2 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 30px;
+            text-align: center;
+            background: linear-gradient(135deg, #6A0DAD, #8A2BE2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            opacity: 0.9;
+            max-width: 3em;
+        }
+
+        /* Crisis Stats */
+        .crisis-stats {
+            background: rgba(106, 13, 173, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(106, 13, 173, 0.3);
+            padding: 40px;
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .stat-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #6A0DAD;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        .disclaimer {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            font-style: italic;
+            margin-top: 20px;
+        }
+
+        /* Joey's Story */
+        .founder-story {
+            background: rgba(106, 13, 173, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
+        }
+
+        .story-quote {
+            font-size: 1.3rem;
+            font-style: italic;
+            line-height: 1.7;
+            padding: 30px;
+            background: rgba(106, 13, 173, 0.2);
+            border-left: 4px solid #6A0DAD;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+
+        .story-details {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin: 20px 0;
+        }
+
+        /* Program Sections */
+        .pilot-explainer {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .pilot-card {
+            padding: 30px;
+            background: rgba(106, 13, 173, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(106, 13, 173, 0.3);
+        }
+
+        .pilot-card h3 {
+            color: #6A0DAD;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .pilot-card ul {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+
+        .pilot-card li {
+            margin-bottom: 8px;
+        }
+
+        /* How It Works */
+        .how-it-works {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .step-card {
+            text-align: center;
+            padding: 30px;
+            background: rgba(106, 13, 173, 0.1);
+            border-radius: 15px;
+            border: 1px solid rgba(106, 13, 173, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .step-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .step-number {
+            font-size: 3rem;
+            font-weight: 900;
+            color: #6A0DAD;
+            margin-bottom: 15px;
+        }
+
+        /* Sneak Peek */
+        .sneak-peek {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .peek-card {
+            padding: 25px;
+            background: rgba(106, 13, 173, 0.1);
+            border-radius: 15px;
+            border: 1px solid rgba(106, 13, 173, 0.3);
+            text-align: center;
+        }
+
+        .week-badge {
+            background: #6A0DAD;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        /* CTA Buttons */
+        .cta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .cta-secondary {
+            background: transparent;
+            border: 2px solid #6A0DAD;
+            padding: 15px 30px;
+            border-radius: 50px;
+            color: #6A0DAD;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            transition: all 0.3s ease;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cta-secondary:hover {
+            background: #6A0DAD;
+            color: white;
+        }
+
+        /* Contact Block */
+        .contact-block {
+            background: rgba(106, 13, 173, 0.2);
+            border: 2px solid #6A0DAD;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .contact-number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #6A0DAD;
+            margin: 10px 0;
+        }
+
+        /* Privacy Section */
+        .privacy-section {
+            background: rgba(34, 197, 94, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            border: 1px solid rgba(34, 197, 94, 0.3);
+        }
+
+        /* FAQ */
+        .faq-item {
+            margin-bottom: 30px;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .faq-question {
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #6A0DAD;
+        }
+
+        .faq-answer {
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 60px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .section p {
+                max-width: none;
+            }
+            
+            .hero {
+                padding: 40px 20px;
+            }
+            
+            body {
+                font-size: 16px;
+            }
+        }
+
+        /* Scroll animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-bg">
+        <div class="floating-orb orb-1"></div>
+        <div class="floating-orb orb-2"></div>
+        <div class="floating-orb orb-3"></div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1 class="supriety-logo">Supriety™</h1>
+        <div class="tagline">The struggle was worth the solution.</div>
+        <div class="promise">Verify a clean week. We'll celebrate it and turn it into real-world good—funded by sponsors.</div>
+        <div class="trust-strip">Privacy-by-default • No medical advice • Transparent impact</div>
+        <a href="#pilot" class="cta-button">Join the pilot (free)</a>
+    </section>
+
+    <!-- Crisis Stats -->
+    <section class="section fade-in">
+        <div class="crisis-stats">
+            <p>The reality we're facing:</p>
+            <div class="stat-row">
+                <div class="stat-card">
+                    <div class="stat-number">80K+</div>
+                    <div class="stat-label">US F-word Deaths 2024</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">635</div>
+                    <div class="stat-label">San Francisco Deaths 2024</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">2</div>
+                    <div class="stat-label">People Die Daily in SF (2025)</div>
+                </div>
+            </div>
+            <div class="disclaimer">*Statistics for demonstration purposes. Sources: CDC 2024 provisional data, SF.gov 2024 report, 2025 SF trend analysis.</div>
+        </div>
+    </section>
+
+    <!-- Founder Story -->
+    <section class="section fade-in" id="story">
+        <h2>From Survivor to Founder</h2>
+        <div class="founder-story">
+            <div class="story-quote">
+                "April 3rd, 2020. Library parking lot, broad daylight. The knife went in near my heart. 45 minutes until paramedics arrived. CO₂ bubbles in my aortic artery. Emergency surgery. I survived."
+            </div>
+            
+            <div class="story-details">
+                <p>Twelve years of lived experience. Homelessness. Jail. Heroin and the F-word. That stabbing could have been my end. Instead, it became my beginning.</p>
+                
+                <p>I didn't get clean through rehab or 12-steps. I rebuilt my dopamine system through daily discipline and verification of my humanity. No withdrawals. No powerless surrender. Just progress, accountability, and purpose.</p>
+                
+                <p>Now I'm teaching others to do the same. Because lived experience builds trust in ways that medical degrees never can.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pilot Program -->
+    <section class="section fade-in" id="pilot">
+        <h2>The Pilot Program (50-100 People)</h2>
+        <div class="pilot-explainer">
+            <div class="pilot-card">
+                <h3>Who It's For</h3>
+                <p>People ready to verify their recovery journey and turn their progress into positive impact.</p>
+                <ul>
+                    <li>Struggling with the F-word</li>
+                    <li>Tired of traditional approaches</li>
+                    <li>Want to build purpose + income</li>
+                    <li>Value privacy and dignity</li>
+                </ul>
+            </div>
+            
+            <div class="pilot-card">
+                <h3>What You Get</h3>
+                <ul>
+                    <li>Full platform access</li>
+                    <li>Creator-economy mini-courses</li>
+                    <li>Gift card incentives for verified progress</li>
+                    <li>Your own Patreon-style support page</li>
+                    <li>Community of others on the journey</li>
+                    <li>Progress tracking (private by default)</li>
+                </ul>
+            </div>
+            
+            <div class="pilot-card">
+                <h3>Recovery Squad Selection</h3>
+                <p>Top 10 from the pilot earn Recovery Squad status based on:</p>
+                <ul>
+                    <li>Verified personal progress</li>
+                    <li>Helping the most people quit the F-word</li>
+                    <li>Opt-in public scoreboard participation</li>
+                </ul>
+                <p><strong>Important:</strong> No one gets kicked out. Everyone keeps platform access. The top 10 just get additional benefits and leadership roles.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recovery Squad -->
+    <section class="section fade-in">
+        <h2>Recovery Squad (Top 10)</h2>
+        <div class="pilot-card" style="max-width: 800px; margin: 0 auto;">
+            <p>The 10 leaders who prove the system works at scale become the first Recovery Squad—our founding army of change.</p>
+            
+            <h3>Recovery Squad Benefits</h3>
+            <ul>
+                <li>Higher incentives and rewards</li>
+                <li>More publicity and platform features</li>
+                <li>Direct mentorship from Joey Noble</li>
+                <li>Production support for your story</li>
+                <li>Revenue sharing opportunities</li>
+                <li>Leadership in building the movement</li>
+            </ul>
+            
+            <p><strong>This is about progress, not perfection.</strong> We're looking for people who can help others, not people who never struggle.</p>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="section fade-in">
+        <h2>How It Works</h2>
+        <div class="how-it-works">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <h3>Verify Daily Rituals</h3>
+                <p>Sleep, nutrition, movement, community, service. Simple habits that rebuild your dopamine system naturally.</p>
+            </div>
+            
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <h3>Earn Points & Badges</h3>
+                <p>Track your streaks and progress. Keep everything private by default—you control what's shared.</p>
+            </div>
+            
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <h3>Create Real Impact</h3>
+                <p>Sponsors convert your verified streaks into trees planted, meals donated, cleanups organized. Optional BTC/NFT micro-rewards.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sneak Peek -->
+    <section class="section fade-in">
+        <h2>Your Journey Sneak Peek</h2>
+        <div class="sneak-peek">
+            <div class="peek-card">
+                <div class="week-badge">Week 1</div>
+                <h3>Build Momentum Fast</h3>
+                <p>Verify sleep + movement. Earn 100 points. Progress, not perfection.</p>
+            </div>
+            
+            <div class="peek-card">
+                <div class="week-badge">Week 4</div>
+                <h3>Effort → Impact</h3>
+                <p>10 clean days logged. Unlock the "Momentum" badge. See your impact growing.</p>
+            </div>
+            
+            <div class="peek-card">
+                <div class="week-badge">Week 12</div>
+                <h3>Purpose Compounds</h3>
+                <p>Consistent rituals; optional micro-rewards; your story joins our living docu-series.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacy & Verification -->
+    <section class="section fade-in">
+        <div class="privacy-section">
+            <h2>Privacy & Verification</h2>
+            <p>Your data stays private. Period.</p>
+            
+            <ul>
+                <li><strong>Encrypted verification:</strong> Used only to distribute incentives</li>
+                <li><strong>You control what's public:</strong> Default is completely private</li>
+                <li><strong>No medical advice:</strong> We don't diagnose or treat</li>
+                <li><strong>We never sell your data:</strong> Ever</li>
+                <li><strong>Transparent reports:</strong> See exactly how sponsor money is used</li>
+            </ul>
+            
+            <p>This is about dignity-first recovery and community support—not surveillance or medical treatment.</p>
+        </div>
+    </section>
+
+    <!-- CTA Grid -->
+    <section class="section fade-in">
+        <h2>Ready to Start?</h2>
+        <div class="cta-grid">
+            <a href="mailto:joey@supriety.com?subject=Pilot%20Program%20Application" class="cta-button">Join the pilot (free)</a>
+            <a href="#sponsor" class="cta-secondary">Sponsor a Quest</a>
+            <a href="#family" class="cta-secondary">Creators & Family</a>
+        </div>
+        
+        <div class="contact-block">
+            <p><strong>Questions? Text Joey directly:</strong></p>
+            <div class="contact-number">415-240-1753</div>
+            <p><em>Real person. Real answers. Real experience.</em></p>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section fade-in">
+        <h2>Frequently Asked Questions</h2>
+        
+        <div class="faq-item">
+            <div class="faq-question">Why call it the "F-word"?</div>
+            <div class="faq-answer">To reduce stigma and keep our platform safe. We're talking about the same thing—just with more dignity.</div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">How are the top 10 Recovery Squad members chosen?</div>
+            <div class="faq-answer">Based on two clear criteria: verified personal progress and helping the most people quit the F-word. Transparent scoring with opt-in public scoreboard.</div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">What gets published about me?</div>
+            <div class="faq-answer">Nothing unless you choose it. Everything is private by default. You control what's shared, when, and how.</div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">Is this medical treatment?</div>
+            <div class="faq-answer">No. We provide support, incentives, and community. We don't give medical advice or treatment. Always consult healthcare providers for medical decisions.</div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">Where do the incentives come from?</div>
+            <div class="faq-answer">Sponsors who want to support recovery and create positive impact. We publish transparent reports showing exactly how funds are used.</div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">What if I relapse?</div>
+            <div class="faq-answer">Progress over perfection. You're not out. We're here to support you through setbacks, not judge you for them.</div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">How much does this cost?</div>
+            <div class="faq-answer">The pilot program is completely free. We're funded by sponsors who believe in this mission.</div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p><strong>Supriety™ is a privacy-first recovery and impact platform. We do not provide medical advice or treatment. If you're in danger, call emergency services immediately.</strong></p>
+    </div>
+
+    <script>
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Enhanced button interactions
+        document.querySelectorAll('.cta-button, .cta-secondary').forEach(button => {
+            button.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-2px) scale(1.02)';
+            });
+            
+            button.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
