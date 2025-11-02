@@ -1,0 +1,52 @@
+PURPOSE DISCOVERY FRAMEWORK
+Channel lived experience into meaningful direction.
+Created by Joey Noble · Educational coaching content only.
+
+────────────────────────────
+1. VALUES CLARIFICATION SPRINT
+────────────────────────────
+• List 10 moments that made you feel alive (not just “happy”).
+• Circle the emotions or values that show up repeatedly (e.g., service, honesty, freedom).
+• Narrow to your top 5 values and define what each means in one sentence.
+• Gemini prompt: “Help me define my top five values using short, powerful statements rooted in service and recovery.”
+
+────────────────────────────
+2. PASSION-TO-PURPOSE BRIDGE
+────────────────────────────
+• Create two columns:
+  - Column A: Skills or interests you enjoy (storytelling, cooking, peer support).
+  - Column B: Community needs you’ve witnessed (overdose education, pet safety, resource navigation).
+• Draw lines connecting any skill that could meet a need.
+• Choose one connection to experiment with in the next 7 days.
+• Gemini prompt: “Generate three micro-project ideas combining [skill] and [community need] to test this week.”
+
+────────────────────────────
+3. MEANINGFUL GOAL SETTING MAP
+────────────────────────────
+• Define a 90-day “Impact Target” (example: “Support 10 people in accessing harm reduction tools”).
+• Break it down using the M.A.P. method:
+  - Milestones (monthly checkpoints)
+  - Actions (weekly tasks)
+  - Partners (who can help)
+• Gemini prompt: “Turn my impact target into a 90-day roadmap with milestones, actions, and accountability partners.”
+
+────────────────────────────
+4. SERVICE-ORIENTED THINKING PRACTICES
+────────────────────────────
+• Weekly “Service Scan”: Ask “Who around me could use a message, resource, or ride?”
+• Gratitude-to-Action formula: Thank someone, then ask how you can support their week.
+• Story bank: Keep a note of meaningful interactions so you can share them (with consent) when inspiring others.
+• Gemini prompt: “Draft a kind outreach message offering support to someone new in recovery without sounding pushy.”
+
+────────────────────────────
+5. PURPOSE REVIEW & EVOLUTION
+────────────────────────────
+• Monthly reflection questions:
+  1. What actions this month aligned with my core values?
+  2. Where did I feel drained or off-mission?
+  3. Which relationships fueled my purpose?
+• Update your Impact Target based on insights.
+• Share your reflections with a mentor or accountability partner for feedback.
+• Gemini prompt: “Summarize my monthly purpose reflections in a motivating paragraph I can share with my support team.”
+
+Use this framework with mentors, therapists, or coaches to ensure your purpose supports your recovery.

@@ -1,0 +1,59 @@
+COMMUNITY CONNECTION STARTER KIT
+Built for people who want recovery relationships that last.
+Educational resource – consult licensed professionals for medical or legal guidance.
+
+────────────────────────────
+1. FINDING SUPPORTIVE COMMUNITIES
+────────────────────────────
+• Mutual aid meetings: Search https://findtreatment.gov/ for local peer support and filter by “support groups.”
+• Online recovery spaces:
+  - Reddit r/StopSpeeding, r/OpiatesRecovery (moderated peer communities)
+  - https://www.smartrecovery.org/community/ (SMART Recovery online meetings)
+  - https://www.facesandvoicesofrecovery.org/resources/recovery-community-organizations/ (directory of recovery community organizations)
+• Faith or values-based groups: Ask local shelters, community centers, or libraries for weekly gatherings that align with your values.
+
+────────────────────────────
+2. CONVERSATION STARTERS FOR PEER SUPPORT
+────────────────────────────
+• “What helped you stay grounded this week?”
+• “Can we swap strategies for handling cravings or stress?”
+• “I’m focusing on boundaries—what does a healthy boundary look like for you?”
+• “What’s one resource you’re grateful for right now?”
+• Gemini prompt: “Create five empathetic conversation starters to deepen connection with a new recovery partner.”
+
+────────────────────────────
+3. BOUNDARY SETTING IN RECOVERY RELATIONSHIPS
+────────────────────────────
+• Define your non-negotiables. Example categories: sobriety, communication style, respect.
+• Communicate clearly:
+  - State the boundary (“I can’t be around active use.”)
+  - Explain the why (“It pulls me back into survival mode.”)
+  - Offer an alternative (“Let’s meet for coffee after your meeting.”)
+• Boundary reset script: “I value our connection, and I need to protect my recovery. Let’s create a plan that keeps both of us safe.”
+• Gemini prompt: “Draft a boundary-setting text that protects my recovery without shaming the other person.”
+
+────────────────────────────
+4. BUILDING ACCOUNTABILITY PARTNERSHIPS
+────────────────────────────
+• Choose partners who:
+  - Show up consistently.
+  - Respect confidentiality.
+  - Celebrate progress, not perfection.
+• Weekly check-in structure:
+  1. Share one win.
+  2. Share one challenge.
+  3. State a focus for next week.
+  4. Schedule your next check-in.
+• Accountability tracker idea: share a Google Sheet or note with columns for commitments, check-in dates, and mood scores.
+• Gemini prompt: “Design a 10-minute weekly accountability agenda for two recovery partners.”
+
+────────────────────────────
+5. RAPID CONNECTION BLUEPRINT (PRINTABLE)
+────────────────────────────
+Name: __________________________
+Preferred contact method: __________________________
+Early warning signs I notice: ______________________________________________
+How I like support: _______________________________________________________
+What to do if I go quiet: _________________________________________________
+
+Fill this out with new partners so everyone knows how to help in critical moments.

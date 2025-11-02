@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Supriety™️ Terms of Service</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand-mark">Supriety™️</div>
+    <p class="tagline">The Struggle Was Worth The Solution</p>
+  </header>
+
+  <main class="container" style="background:var(--color-surface); border-radius:1.5rem; padding:2.5rem; box-shadow:var(--shadow-card); margin-top:2rem; margin-bottom:3rem;">
+    <h1 style="font-family:var(--font-heading); color:var(--color-navy); margin-bottom:1.5rem;">Terms of Service</h1>
+    <p>Effective date: <strong><span id="effective-date"></span></strong></p>
+
+    <h2 style="font-family:var(--font-heading); margin-top:2rem;">1. Acceptance of Terms</h2>
+    <p>By accessing Supriety™️ websites, downloading resources, or purchasing products, you agree to these Terms of Service and our Privacy Policy.</p>
+
+    <h2 style="font-family:var(--font-heading); margin-top:2rem;">2. Educational Content Only</h2>
+    <p>Supriety™️ provides educational information based on Joey Noble’s lived experience. We do not provide medical care, diagnosis, or treatment. Always consult licensed professionals for medical decisions.</p>
+
+    <h2 style="font-family:var(--font-heading); margin-top:2rem;">3. Accounts &amp; Communications</h2>
+    <p>You may receive emails related to your downloads, purchases, and community updates. You can unsubscribe at any time. You are responsible for maintaining the accuracy of your contact information.</p>
+
+    <h2 style="font-family:var(--font-heading); margin-top:2rem;">4. Payments &amp; Refunds</h2>
+    <p>Digital products are sold through PayHip or other approved processors. All paid products include a 14-day money-back guarantee. To request a refund, email <a href="mailto:support@supriety.com">support@supriety.com</a> with your order details within 14 days of purchase.</p>
+
+    <h2 style="font-family:var(--font-heading); margin-top:2rem;">5. Intellectual Property</h2>
+    <p>All content, branding, and materials are owned by Supriety™️ and protected by intellectual property laws. You may not redistribute or resell content without written consent. You may share social media assets provided for promotional use with attribution.</p>
+
+    <h2 style="font-family:var(--font-heading); margin-top:2rem;">6. User Conduct</h2>
+    <p>When engaging with Supriety™️ communities or events, you agree to respectful communication. Harassment, hate speech, or exploitation will result in removal without refund.</p>
+
+    <h2 style="font-family:var(--font-heading); margin-top:2rem;">7. Third-Party Links</h2>
+    <p>Our resources link to government agencies, medical institutions, and nonprofits. We are not responsible for third-party content. Verify information with your healthcare team.</p>
+
+    <h2 style="font-family:var(--font-heading); margin-top:2rem;">8. Limitation of Liability</h2>
+    <p>Supriety™️ is not liable for indirect, incidental, or consequential damages arising from the use of our content. Participation is voluntary and at your own risk.</p>
+
+    <h2 style="font-family:var(--font-heading); margin-top:2rem;">9. Updates to Terms</h2>
+    <p>We may update these Terms periodically. Continued use constitutes acceptance of updated terms. Significant changes will be communicated via email or site notice.</p>
+
+    <h2 style="font-family:var(--font-heading); margin-top:2rem;">10. Contact</h2>
+    <p>Questions? Email <a href="mailto:support@supriety.com">support@supriety.com</a> or mail Supriety™️, 123 Mission Street, San Francisco, CA 94105.</p>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <small><strong>IMPORTANT DISCLAIMER:</strong> This information is educational only and not medical advice. Built from lived experience by Joey Noble, Supriety™️ Founder – not some tech clinic that hasn’t walked this path. Always consult licensed professionals for treatment decisions. Individual results may vary. If in crisis, call emergency services immediately.</small>
+      <small style="margin-top:1rem;">© <span id="year"></span> Supriety™️. All rights reserved. <a href="index.html">Back to Landing Page</a></small>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('effective-date').textContent = new Date().toLocaleDateString();
+  </script>
+</body>
+</html>

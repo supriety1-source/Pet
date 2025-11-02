@@ -1,0 +1,62 @@
+SUPRIETY™️ FUNNEL DEPLOYMENT GUIDE
+Built by Joey Noble’s lived experience – now it’s your turn to launch.
+
+BEFORE YOU START
+• Gather your hosting credentials (GoDaddy, Netlify, etc.).
+• Create or log into your PayHip account.
+• Choose your email service provider (Mailchimp, ConvertKit, Beehiiv, etc.).
+
+STEP 1 – CONVERT TEXT FILES TO PDF
+1. Open each .txt file inside WEB_FILES/free-downloads/ and PAYHIP_PRODUCTS/.
+2. Paste the content into Google Docs or Microsoft Word.
+3. Format with clear headings, bullet lists, and the Supriety™️ color palette (teal, ocean blue, mint).
+4. Export each document as PDF, keeping the same filename (only change the extension to .pdf).
+5. Store the PDFs locally for uploading in later steps.
+
+STEP 2 – PREPARE WEB FILES FOR HOSTING
+1. Upload everything inside SUPRIETY_FUNNEL_COMPLETE/WEB_FILES/ to your hosting root directory.
+2. Ensure index.html is at the root so it becomes the main landing page.
+3. Confirm thankyou.html is accessible directly (e.g., https://yourdomain.com/thankyou.html).
+4. Upload the free-download .txt files (and PDFs if you want to host them) into a folder named free-downloads/ on the server.
+5. If you prefer serving PDFs, update the download links in index.html and thankyou.html accordingly.
+
+STEP 3 – CONNECT YOUR EMAIL CAPTURE
+1. In your ESP, create a list/audience specifically for Supriety™️ leads.
+2. Generate the HTML embed form from your ESP.
+3. Replace the entire &lt;form&gt; in index.html (id="lead-form") with the embed code.
+4. Keep the countdown and surrounding copy intact for maximum conversion.
+5. Submit a test entry to ensure the form captures emails and reroutes to thankyou.html (set the redirect inside your ESP).
+
+STEP 4 – LAUNCH PRODUCTS ON PAYHIP
+1. Upload each PDF from PAYHIP_PRODUCTS/ to PayHip as an individual product.
+2. Set pricing to pay-what-you-want with a default of $8.97 and add tier suggestions ($20, $40, $60).
+3. Add the 14-day money-back guarantee to your PayHip product description.
+4. Copy the final PayHip product link.
+5. In index.html and thankyou.html, update the data-payhip-base attribute (search for "data-payhip-base") and the fallback href links with your actual PayHip URL.
+
+STEP 5 – UPDATE SLIDER DOWNLOAD LINKS (OPTIONAL PDF SWAP)
+1. If you uploaded PDFs, edit the href attributes for the three free download buttons in thankyou.html and index.html to point to the PDFs.
+2. Keep the slider arrows as-is; the JavaScript already enables next/previous navigation.
+3. Test each arrow button to confirm smooth transitions on mobile and desktop.
+
+STEP 6 – VERIFY COUNTDOWN & PAY-WHAT-YOU-WANT
+1. Open index.html in a browser to confirm the 3-day countdown starts.
+2. Change the pay-what-you-want options to ensure the button text and donation note update.
+3. Repeat the test on thankyou.html. The same script powers both pages.
+4. Clear localStorage in your browser if you want to reset the countdown during testing.
+
+STEP 7 – FINAL TEST PASS
+1. Visit the landing page on mobile and desktop devices.
+2. Submit your email to trigger the redirect to thankyou.html.
+3. Click each free download button and slider arrow.
+4. Click the toolkit CTA to confirm it routes to PayHip with the amount parameter appended.
+5. Review disclaimers and money-back guarantee text for accuracy.
+6. Share the funnel with a trusted ally for feedback before public launch.
+
+MAINTENANCE NOTES
+• Update external resource links quarterly to ensure accuracy.
+• Rotate Gemini prompts or add new ones as your story evolves.
+• Celebrate big contributors publicly (with permission) via your email list or social channels.
+• Keep analytics from your ESP and PayHip to track conversion improvements.
+
+Need support? Email hello@supriety.com and include “Funnel Setup” in the subject line.

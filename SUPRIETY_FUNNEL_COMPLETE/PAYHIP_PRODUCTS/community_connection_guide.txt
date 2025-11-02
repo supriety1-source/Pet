@@ -1,0 +1,64 @@
+COMMUNITY CONNECTION GUIDE
+Lead, mentor, and amplify recovery communities with integrity.
+Created by Joey Noble · Educational leadership resource.
+
+────────────────────────────
+1. ADVANCED PEER SUPPORT STRATEGIES
+────────────────────────────
+• Create a support rotation: pair newcomers with rotating “buddies” for weekly check-ins.
+• Use the “Listen-Reflect-Resource” model:
+  1. Listen without interrupting.
+  2. Reflect what you heard (“It sounds like…”).
+  3. Offer one resource or question (“Would it help to review the Bernese Method guide together?”).
+• Gemini prompt: “Draft a facilitation script for a 30-minute peer support circle focused on harm reduction wins.”
+
+────────────────────────────
+2. LEADERSHIP DEVELOPMENT PATHWAY
+────────────────────────────
+• Stage 1 – Observer: attend meetings, note what works, and offer to help with setup or clean-up.
+• Stage 2 – Co-Facilitator: lead opening check-ins, share personal wins, and manage time respectfully.
+• Stage 3 – Mentor Leader: host topic nights, coordinate resources, and mentor new facilitators.
+• Leadership reflection questions:
+  - What tone did I set?
+  - Did everyone feel seen?
+  - What follow-ups do I owe?
+• Gemini prompt: “Provide five reflective questions for debriefing after leading a recovery group.”
+
+────────────────────────────
+3. MENTOR / MENTEE RELATIONSHIP BLUEPRINT
+────────────────────────────
+• Set expectations early:
+  - Frequency of check-ins (weekly, bi-weekly).
+  - Communication method (call, text, encrypted chat).
+  - Topics that are off-limits or require professional referral.
+• “The 5 C’s” of mentorship: Consistency, Confidentiality, Compassion, Challenge, Celebration.
+• Feedback loop: once a month, both parties share one thing to improve.
+• Gemini prompt: “Create a mentor-mentee agreement outline for recovery partnerships.”
+
+────────────────────────────
+4. PUBLIC SPEAKING & STORY SHARING (ETHICAL GUIDELINES)
+────────────────────────────
+• Story arc template:
+  1. Hook – the moment everything changed.
+  2. Struggle – the honest challenges (without glamorizing use).
+  3. Solution – the resources that worked (directory, mindset, community).
+  4. Invitation – how listeners can access help now.
+• Safeguard details: avoid sharing other people’s stories without consent and never mention active legal matters.
+• Prep checklist before speaking:
+  - Confirm event purpose and audience age range.
+  - Prepare a resource handout or QR code linking to Supriety™️ guides.
+  - Identify emotional support for after your talk.
+• Gemini prompt: “Write a 3-minute talk outline sharing my recovery journey responsibly and offering the Supriety™️ directory.”
+
+────────────────────────────
+5. DIGITAL AMPLIFICATION & COLLABORATIONS
+────────────────────────────
+• Create a monthly content theme (e.g., “Pet Safety Month,” “Narcan Awareness Week”).
+• Batch create assets with Gemini: ask for captions, scripts, or email drafts using prompts inside this guide.
+• Collaboration outreach template:
+  - Compliment their mission.
+  - Share how Supriety™️ resources align.
+  - Suggest a co-created live, workshop, or resource swap.
+• Gemini prompt: “Draft a collaboration email inviting a local nonprofit to co-host a Naloxone awareness livestream.”
+
+Lead with empathy, protect confidentiality, and always refer medical questions to licensed professionals.
