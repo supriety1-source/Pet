@@ -8,6 +8,7 @@ import { LoginPage } from './pages/LoginPage';
 import { SignupPage } from './pages/SignupPage';
 import { OnboardingPage } from './pages/OnboardingPage';
 import { DashboardPage } from './pages/DashboardPage';
+import { LogActPage } from './pages/LogActPage';
 
 // Protected Route wrapper
 const ProtectedRoute: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -58,17 +59,15 @@ function App() {
             </ProtectedRoute>
           } />
 
-          {/* Placeholder routes - to be implemented */}
           <Route path="/log-act" element={
             <ProtectedRoute>
               <AppLayout>
-                <div className="p-8 text-center">
-                  <h1 className="text-2xl font-bold">Log Act Page - Coming Soon</h1>
-                  <p className="text-gray-medium mt-2">This feature is being built</p>
-                </div>
+                <LogActPage />
               </AppLayout>
             </ProtectedRoute>
           } />
+
+          {/* Placeholder routes - to be implemented */}
 
           <Route path="/community" element={
             <ProtectedRoute>
