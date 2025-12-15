@@ -9,6 +9,7 @@ import { SignupPage } from './pages/SignupPage';
 import { OnboardingPage } from './pages/OnboardingPage';
 import { DashboardPage } from './pages/DashboardPage';
 import { LogActPage } from './pages/LogActPage';
+import { MyActsPage } from './pages/MyActsPage';
 
 // Protected Route wrapper
 const ProtectedRoute: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -63,6 +64,14 @@ function App() {
             <ProtectedRoute>
               <AppLayout>
                 <LogActPage />
+              </AppLayout>
+            </ProtectedRoute>
+          } />
+
+          <Route path="/my-acts" element={
+            <ProtectedRoute>
+              <AppLayout>
+                <MyActsPage />
               </AppLayout>
             </ProtectedRoute>
           } />
