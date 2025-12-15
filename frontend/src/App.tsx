@@ -10,6 +10,7 @@ import { OnboardingPage } from './pages/OnboardingPage';
 import { DashboardPage } from './pages/DashboardPage';
 import { LogActPage } from './pages/LogActPage';
 import { MyActsPage } from './pages/MyActsPage';
+import { AdminDashboardPage } from './pages/AdminDashboardPage';
 
 // Protected Route wrapper
 const ProtectedRoute: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -125,10 +126,7 @@ function App() {
           <Route path="/admin" element={
             <ProtectedRoute>
               <AppLayout>
-                <div className="p-8 text-center">
-                  <h1 className="text-2xl font-bold">Admin Dashboard - Coming Soon</h1>
-                  <p className="text-gray-medium mt-2">This feature is being built</p>
-                </div>
+                <AdminDashboardPage />
               </AppLayout>
             </ProtectedRoute>
           } />
