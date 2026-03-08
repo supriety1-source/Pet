@@ -2,6 +2,8 @@
   --purple: #6A0DAD;
   --text: #222;
   --bg: #fff;
+  --muted: #666;
+  --surface: #f8f7fb;
 }
 
 body {
@@ -13,13 +15,21 @@ body {
 }
 
 .container {
-  max-width: 600px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 1.5rem 1rem;
 }
 
-header {
+.hero {
   text-align: center;
+}
+
+.eyebrow {
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin: 0;
 }
 
 .hero-tree {
@@ -36,6 +46,8 @@ header {
 
 .lede {
   font-size: 1rem;
+  max-width: 700px;
+  margin: 0.75rem auto;
 }
 
 .optin {
@@ -43,6 +55,9 @@ header {
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .optin input {
@@ -53,6 +68,7 @@ header {
 }
 
 .btn {
+  margin-top: 0.5rem;
   padding: 0.75rem 1.25rem;
   background: var(--purple);
   color: #fff;
@@ -93,7 +109,7 @@ header {
 
 .impact {
   margin-top: 1rem;
-  font-size: 1.25rem;
+  font-size: 2rem;
   font-weight: bold;
 }
 
@@ -101,12 +117,7 @@ header {
   display: block;
   font-size: 0.75rem;
   font-weight: normal;
-}
-
-.kicker {
-  font-size: 0.75rem;
-  margin-top: 1rem;
-  color: #555;
+  color: var(--muted);
 }
 
 section {
@@ -121,10 +132,63 @@ section.reveal {
   transform: none;
 }
 
+.suite-grid,
+.pricing-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid #e8e2f3;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.meta {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-bottom: 0;
+}
+
+.price-tag {
+  font-size: 2rem;
+  line-height: 1;
+  margin: 0.25rem 0 0.5rem;
+  color: var(--purple);
+  font-weight: 700;
+}
+
+.price ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.featured {
+  box-shadow: 0 8px 24px rgba(106, 13, 173, 0.12);
+  border-color: #d4b6ef;
+}
+
+.pill {
+  display: inline-block;
+  margin: 0;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  background: #eee5f7;
+  color: #4f0685;
+  font-size: 0.75rem;
+}
+
 footer {
   text-align: center;
   padding: 2rem 1rem;
-  font-size: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--muted);
   background: #f9f9f9;
 }
 
@@ -142,10 +206,13 @@ footer {
 
 .sticky-cta .btn {
   width: 100%;
+  margin-top: 0;
 }
 
 @media (max-width: 767px) {
-  .sticky-cta { display: block; }
+  .sticky-cta {
+    display: block;
+  }
 }
 
 .sr-only {
