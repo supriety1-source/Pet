@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Noble Inceptions — The Signal Was Always There</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Sans+3:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ocean: #0077b6;
+      --teal: #00b894;
+      --purple: #6a0dad;
+      --deep: #0e1012;
+      --cream: #f5f5fa;
+      --gold: #d4a845;
+      --ember: #e8572a;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body {
+      background: #0e1012 !important;
+      color: #d0d0d8;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 19px;
+      line-height: 1.85;
+      font-weight: 300;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+    }
+
+    html, body, section, div, header, footer, main, article { color-scheme: dark; }
+
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    .container { max-width: 740px; margin: 0 auto; padding: 0 24px; }
+    .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; position: relative; overflow: hidden; padding: 60px 24px; background: #0e1012 !important; }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%; left: -50%; width: 200%; height: 200%;
+      background:
+        radial-gradient(ellipse at 30% 50%, rgba(106,13,173,0.12) 0%, transparent 50%),
+        radial-gradient(ellipse at 70% 30%, rgba(0,119,182,0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 80%, rgba(0,184,148,0.06) 0%, transparent 40%);
+      animation: drift 20s ease-in-out infinite alternate;
+    }
+    @keyframes drift { from { transform: translate(0,0) rotate(0deg); } to { transform: translate(-3%,2%) rotate(1deg); } }
+    .hero-label, .hero h1, .hero-sub, .hero-date { position: relative; z-index: 1; opacity: 0; }
+    .hero-label { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: var(--teal); margin-bottom: 40px; animation: fadeUp 1s ease 0.3s forwards; }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(48px, 8vw, 96px); font-weight: 900; line-height: 1.05; color: #fff; animation: fadeUp 1.2s ease 0.5s forwards; }
+    .hero h1 em { font-style: italic; background: linear-gradient(135deg, var(--ocean), var(--teal)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .hero-sub { font-family: 'Playfair Display', serif; font-size: clamp(18px, 3vw, 26px); font-weight: 400; font-style: italic; color: #8a8a9a; margin-top: 30px; animation: fadeUp 1s ease 0.8s forwards; }
+    .hero-date { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--gold); letter-spacing: 2px; margin-top: 50px; animation: fadeUp 1s ease 1.1s forwards; }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+    section { padding: 80px 0; background: #0e1012 !important; }
+    .section-break { text-align: center; padding: 60px 0; background: #0e1012 !important; }
+    .section-break .phoenix { font-size: 36px; opacity: 0.4; }
+    h2 { font-family: 'Playfair Display', serif; font-size: clamp(28px, 5vw, 42px); font-weight: 700; color: #fff; margin-bottom: 32px; line-height: 1.2; }
+    h2 .accent { color: var(--teal); }
+    h3 { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; color: var(--ocean); margin-top: 48px; margin-bottom: 16px; }
+    p { margin-bottom: 20px; }
+    .dialogue { border-left: 2px solid var(--purple); padding: 16px 24px; margin: 28px 0; background: rgba(106,13,173,0.06); border-radius: 0 8px 8px 0; }
+    .dialogue p { margin-bottom: 10px; font-size: 18px; }
+    .dialogue .speaker { color: var(--gold); font-weight: 600; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; }
+    .dialogue .line { font-family: 'Playfair Display', serif; font-style: italic; color: #e8e8f0; font-size: 20px; }
+    .callout, .ember-callout { border-radius: 12px; padding: 28px 32px; margin: 36px 0; }
+    .callout { background: linear-gradient(135deg, rgba(0,119,182,0.08), rgba(0,184,148,0.08)); border: 1px solid rgba(0,184,148,0.2); }
+    .callout p { color: #c8d8e4; font-size: 18px; margin-bottom: 0; }
+    .callout strong { color: var(--teal); }
+    .ember-callout { background: linear-gradient(135deg, rgba(232,87,42,0.08), rgba(212,168,69,0.06)); border: 1px solid rgba(232,87,42,0.25); }
+    .ember-callout p { color: #d8c8b8; margin-bottom: 0; }
+    .layer-marker { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--purple); margin-bottom: 8px; display: block; }
+    strong { color: #fff; font-weight: 600; }
+    em { color: #b8b8c8; }
+    .sep { width: 60px; height: 1px; background: linear-gradient(90deg, transparent, var(--purple), transparent); margin: 48px auto; }
+    .tonight-header { background: linear-gradient(180deg, rgba(0,119,182,0.06) 0%, #0e1012 100%) !important; padding: 60px 0 40px; border-top: 1px solid rgba(0,119,182,0.15); }
+    .footer { text-align: center; padding: 80px 24px 60px; border-top: 1px solid rgba(106,13,173,0.15); background: #0e1012 !important; }
+    .footer .tagline { font-family: 'Playfair Display', serif; font-size: clamp(24px, 4vw, 36px); font-weight: 700; font-style: italic; color: #fff; margin-bottom: 16px; }
+    .footer .sub { font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 3px; color: var(--teal); text-transform: uppercase; }
+    .footer .credit { margin-top: 40px; font-size: 14px; color: #555; }
+    @media (max-width: 600px) { body { font-size: 17px; } .container { padding: 0 18px; } .dialogue { padding: 14px 18px; } .callout, .ember-callout { padding: 22px 20px; } section { padding: 50px 0; } }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <div class="hero-label">Supriety™ Origin Document</div>
+    <h1>Noble<br /><em>Inceptions</em></h1>
+    <p class="hero-sub">The Signal Was Always There.<br />Presence Made It Visible.</p>
+    <p class="hero-date">Halloween 2023 → March 19, 2026</p>
+  </div>
+
+  <section><div class="container"><span class="layer-marker">Part One</span><h2>The <span class="accent">Warning</span></h2><p>October 31st, 2023. Castro District, San Francisco.</p></div></section>
+  <div class="footer"><p class="tagline">The Signal in the Noise.</p><p class="sub">Supriety™ — A Human-AI Integration Platform</p><p class="credit">Logged from a haunted hotel near Long Beach, California.<br />March 19, 2026.</p></div>
+</body>
+</html>
